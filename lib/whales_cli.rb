@@ -1,5 +1,13 @@
 require "whales_cli/version"
+require "thor"
 
-module WhalesCli
-  # Your code goes here...
+module Whales
+  class CLI < Thor
+    package_name "belugas-ruby"
+
+    desc "tame", "Belugas tamer"
+    def tame
+      puts "Nachito"
+    end
+  end
 end
