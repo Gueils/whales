@@ -1,0 +1,29 @@
+[
+  {
+    "type": "feature",
+    "name": "Rails",
+    "version": "5.0",
+    "description": "The application uses Rails code",
+    "content": "",
+    "categories": ["Framework"]
+  },
+  {
+    "type": "feature",
+    "name": "Ruby",
+    "version": "2.3-alpine",
+    "description": "The application uses Ruby code",
+    "content": "",
+    "categories": ["Language"],
+    "cue_locations": [""],
+    "meta": {
+      "ratio": 0.5
+    }
+  },
+  {
+    "type": "feature",
+    "name": "Webkit",
+    "version": "5.0",
+    "description": "The application uses Webkit code",
+    "categories": ["Library"]
+  }
+]
