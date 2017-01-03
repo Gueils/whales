@@ -1,5 +1,8 @@
-require "whales_cli/version"
 require "thor"
+require "json"
+
+require "whales_cli/feature_collection"
+require "api/client"
 
 module Whales
   class CLI < Thor
@@ -11,3 +14,5 @@ module Whales
     end
   end
 end
+
+require "whales_cli/version"
