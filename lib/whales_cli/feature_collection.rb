@@ -4,6 +4,7 @@ module Whales
   class FeatureCollection
 
     def initialize(features_attributes)
+      puts features_attributes
       @features_attributes = JSON.parse(features_attributes)
     end
 
@@ -14,7 +15,7 @@ module Whales
     end
 
     def dominant_language
-      @dominant_language ||= language_features.max_by { |feature| feature.meta["ratio"] }
+      @dominant_language ||= language_features.max_by { |feature| feature.dig("meta", "ratio").to_f }
     end
 
     def language_features

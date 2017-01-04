@@ -21,6 +21,13 @@
   },
   {
     "type": "feature",
+    "name": "sidekiq",
+    "version": "5.0",
+    "description": "The application uses Sidekiq code",
+    "categories": ["Library"]
+  },
+  {
+    "type": "feature",
     "name": "Webkit",
     "version": "5.0",
     "description": "The application uses Webkit code",
