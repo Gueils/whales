@@ -4,7 +4,6 @@ module Whales
   class FeatureCollection
 
     def initialize(features_attributes)
-      puts features_attributes
       @features_attributes = JSON.parse(features_attributes)
     end
 
@@ -15,7 +14,11 @@ module Whales
     end
 
     def dominant_language
-      @dominant_language ||= language_features.max_by { |feature| feature.dig("meta", "ratio").to_f }
+      @dominant_language ||= if rails? || sinatra? || middleman?
+                               language_features.select { |feature| feature["name"] == "Ruby" }[0]
+                             else
+                               max_ratio_language
+                             end
     end
 
     def language_features
@@ -24,6 +27,28 @@ module Whales
 
     def to_json
       features.map(&:to_json)
+    end
+
+    private
+
+    def max_ratio_language
+      @max_ratio_language ||= language_features.max_by { |feature| feature.dig("meta", "ratio").to_f }
+    end
+
+    def rails?
+      frameworks.map { |f| f["name"] }.include? "rails"
+    end
+
+    def middleman?
+      frameworks.map { |f| f["name"] }.include? "middleman"
+    end
+
+    def sinatra?
+      frameworks.map { |f| f["name"] }.include? "sinatra"
+    end
+
+    def frameworks
+      @frameworks ||= features.select {|feature| feature.categories.include? "Framework" }
     end
   end
 end

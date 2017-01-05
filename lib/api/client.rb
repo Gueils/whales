@@ -12,7 +12,7 @@ module Whales
         if response.success?
           puts response
         else
-          puts "Something went bad"
+          puts response.to_json
         end
       end
     end
