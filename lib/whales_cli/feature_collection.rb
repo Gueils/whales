@@ -16,6 +16,8 @@ module Whales
     def dominant_language
       @dominant_language ||= if rails? || sinatra? || middleman?
                                language_features.select { |feature| feature["name"] == "Ruby" }[0]
+                             elsif django?
+                               language_features.select { |feature| feature["name"] == "Python" }[0]
                              else
                                max_ratio_language
                              end
@@ -33,6 +35,10 @@ module Whales
 
     def max_ratio_language
       @max_ratio_language ||= language_features.max_by { |feature| feature.dig("meta", "ratio").to_f }
+    end
+
+    def django?
+      frameworks.map { |f| f["name"] }.include? "django"
     end
 
     def rails?
