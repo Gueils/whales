@@ -23,7 +23,7 @@ docker pull icalialabs/whales:latest
 ```console
 docker run \
 --interactive --tty --rm \
---env API_BASE_URI=<API_URL> \
+--env API_BASE_URI=whales.herokuapp.com \
 --env BELUGAS_CODE=${PWD} \
 --volume /var/run/docker.sock:/var/run/docker.sock \
 --volume $(pwd):/code icalialabs/whales
