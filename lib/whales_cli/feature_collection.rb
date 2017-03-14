@@ -18,6 +18,8 @@ module Whales
                                language_features.select { |feature| feature["name"] == "Ruby" }[0]
                              elsif django?
                                language_features.select { |feature| feature["name"] == "Python" }[0]
+                             elsif laravel? || codeignater? || yii? || cakephp? || zend?
+                               language_features.select { |feature| feature["name"] == "PHP" }[0]
                              else
                                max_ratio_language
                              end
@@ -51,6 +53,26 @@ module Whales
 
     def sinatra?
       frameworks.map { |f| f["name"] }.include? "sinatra"
+    end
+
+    def laravel?
+      frameworks.map { |f| f["name"] }.include? "laravel"
+    end
+
+    def codeignater?
+      frameworks.map { |f| f["name"] }.include? "codeignater"
+    end
+
+    def cakephp?
+      frameworks.map { |f| f["name"] }.include? "cakephp"
+    end
+
+    def yii?
+      frameworks.map { |f| f["name"] }.include? "yii"
+    end
+
+    def zend?
+      frameworks.map { |f| f["name"] }.include? "zend"
     end
 
     def frameworks
