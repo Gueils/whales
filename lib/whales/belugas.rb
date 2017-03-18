@@ -1,7 +1,8 @@
 module Whales
   class Belugas
-    def initialize(path)
-      @path = path
+    def initialize(options)
+      @path = options[:path]
+      @env = options.fetch(:env, "development")
     end
 
     def run

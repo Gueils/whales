@@ -10,9 +10,11 @@ module Whales
     package_name "belugas-ruby"
 
     desc "tame", "Belugas tamer"
+    method_option :env, aliases: "-e", type: :string, required: false
     method_option :path, aliases: "-p", type: :string, required: false
+
     def tame
-      Whales::Belugas.new(options[:path]).run
+      Whales::Belugas.new(options).run
     end
   end
 end
