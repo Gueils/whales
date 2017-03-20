@@ -7,7 +7,7 @@
 Whales is a tool that automatically dockerizes your applications. It works as command line interface that tames the [Belugas](#belugas-analyzers) features analyzers and outputs necessary Docker files to run your application with Docker.
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/4439027/24087088/c39c1aec-0cdf-11e7-9432-0f2b415d42ec.gif">
+  <img src="https://im3.ezgif.com/tmp/ezgif-3-91ba054284.gif">
 </p>
 
 ## Table of contents
