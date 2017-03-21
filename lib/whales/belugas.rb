@@ -8,7 +8,7 @@ module Whales
     def run
       out = IO.popen(command).read
       collection = Whales::FeatureCollection.new(out)
-      Whales::API::Client.dockerfile(collection)
+      Whales::API::Client.dockerfile(collection, @env)
     end
 
     private

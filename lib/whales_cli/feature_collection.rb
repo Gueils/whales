@@ -2,7 +2,6 @@ require 'whales_cli/feature'
 
 module Whales
   class FeatureCollection
-
     def initialize(features_attributes)
       @features_attributes = JSON.parse(features_attributes)
     end

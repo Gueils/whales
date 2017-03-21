@@ -6,8 +6,11 @@ module Whales
       include HTTParty
       base_uri ENV["API_BASE_URI"]
 
-      def self.dockerfile(feature_collection)
-        response = self.post "/#{feature_collection.dominant_language.name.downcase}/#{feature_collection.dominant_language.version}/dockerize", body: { features: feature_collection.to_json }
+      def self.dockerfile(feature_collection, env)
+        response = self.post "/#{feature_collection.dominant_language.name.downcase}/#{feature_collection.dominant_language.version}/dockerize", body: {
+                               features: feature_collection.to_json,
+                               environment: env
+                             }
 
         if response.success?
           puts response
