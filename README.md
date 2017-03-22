@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/github/WhalesIL/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
+[![Build Status](https://travis-ci.org/WhalesIL/whales.svg?branch=master)](https://travis-ci.org/WhalesIL/whales)
+
 <p align="center">
   <img src="logo.png" height="200px" alt="whales"/>
 </p>
@@ -7,16 +10,21 @@
 Whales is a tool that automatically dockerizes your applications. It works as command line interface that tames the [Belugas](#belugas-analyzers) features analyzers and outputs necessary Docker files to run your application with Docker.
 
 <p align="center">
-  <img src="https://im3.ezgif.com/tmp/ezgif-3-91ba054284.gif">
+  <img src="https://cloud.githubusercontent.com/assets/4439027/24180592/55b98dd2-0e7b-11e7-8a45-04ff3abc1355.gif">
 </p>
 
 ## Table of contents
 
+- [Why](#why)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Belugas Analyzers](#belugas-analyzers)
 - [Contributing](#contributing)
 - [Credits](#credits)
+
+## Why?
+
+Dockerizing your legacy apps was never this easy. We present you the Whales ecosystem: A set of tools to automatically dockerize your applications.
 
 ## Installation
 
@@ -70,20 +78,20 @@ Whales uses Belugas analyzers to detect multiple features on a project based on 
 
 Currently we have the following analyzers
 
-- [Belugas Ruby](https://github.com/IcaliaLabs/belugas-ruby)
-- [Belugas PHP](https://github.com/IcaliaLabs/belugas)
-- [Belugas Python](https://github.com/IcaliaLabs/belugas-python)
-- [Belugas Java](https://github.com/IcaliaLabs/belugas-java) - _In progress_
+- [Belugas Ruby](https://github.com/WhalesIL/belugas-ruby)
+- [Belugas PHP](https://github.com/WhalesIL/belugas)
+- [Belugas Python](https://github.com/WhalesIL/belugas-python)
+- [Belugas Java](https://github.com/WhalesIL/belugas-java) - _In progress_
 
 ## Contributing
 
-Everyone is freely to collaborate, just make sure you follow our [code of conduct](https://github.com/IcaliaLabs/whales-cli/blob/master/CODE_OF_CONDUCT.md). Thank you [contributors](https://github.com/IcaliaLabs/whales-cli/graphs/contributors)!
+Everyone is freely to collaborate, just make sure you follow our [code of conduct](https://github.com/WhalesIL/whales/blob/master/CODE_OF_CONDUCT.md). Thank you [contributors](https://github.com/WhalesIL/whales/graphs/contributors)!
 
 ### Create an Issue
 
-Find a bug and don't know how to fix it? Have trouble following the documentation or have a question about the project? Then by all means, please [create an issue](https://github.com/IcaliaLabs/whales-cli/issues/new).
+Find a bug and don't know how to fix it? Have trouble following the documentation or have a question about the project? Then by all means, please [create an issue](https://github.com/WhalesIL/whales/issues/new).
 
-Just please make sure you check [existing issues](https://github.com/IcaliaLabs/whales-cli/issues) to see if what you're running into has been addressed already.
+Just please make sure you check [existing issues](https://github.com/WhalesIL/whales/issues) to see if what you're running into has been addressed already.
 
 ### Submit a Pull Request
 
@@ -97,12 +105,12 @@ Once you've created a pull request, mainteners will chime in to review your prop
 
 ### I want to contribute but don't know where to start
 
-That's great also! We already have some [open issues](https://github.com/IcaliaLabs/whales-cli/issues) for you to dive in.
+That's great also! We already have some [open issues](https://github.com/WhalesIL/whales/issues) for you to dive in.
 
 ## Copyright
 
-See [LICENSE](https://github.com/IcaliaLabs/whales-cli/blob/master/LICENSE.txt)
+See [LICENSE](https://github.com/WhalesIL/whales/blob/master/LICENSE.txt)
 
-![Icalia Labs](https://raw.githubusercontent.com/IcaliaLabs/kaishi/master/logo.png)
+![Icalia Labs](https://raw.githubusercontent.com/icalialabs/kaishi/master/logo.png)
 
 Whales is maintained by [Icalia Labs](http://www.icalialabs.com/team)
