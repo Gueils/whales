@@ -30,14 +30,14 @@ Dockerizing your legacy apps was never this easy. We present you the Whales ecos
 
 ### Prerequisites
 
-Whales is distributed and run as a [Docker](https://hub.docker.com/r/icalialabs/whales/) image, so you only need to have Docker [installed](https://docs.docker.com/engine/installation/) and running on your machine.
+Whales is distributed and run as a [Docker](https://hub.docker.com/r/whalesil/whales/) image, so you only need to have Docker [installed](https://docs.docker.com/engine/installation/) and running on your machine.
 
 ### Setup
 
 Fire up your terminal and run: 
 
 ```console
-docker pull icalialabs/whales:latest
+docker pull whalesil/whales:latest
 ```
 
 And that's it! 
@@ -58,7 +58,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code icalialabs/whales
+  --volume $(pwd):/code whalesil/whales
 ```
 
 By default Whales returns `dev.Dockerfile` and `docker-compose.yml` files, this are the files you need to run Docker on development mode. If you want the `Dockerfile` for production, just run the same command with an `-e="production` flag:
@@ -69,7 +69,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code icalialabs/whales whales tame -e="production"
+  --volume $(pwd):/code whalesil/whales whales tame -e="production"
 ``` 
 
 ## Belugas Analyzers
