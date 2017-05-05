@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/WhalesIL/whales.svg?branch=master)](https://travis-ci.org/WhalesIL/whales)
 
 <p align="center">
-  <img src="logo.png" height="200px" alt="whales"/>
+  <img src="whales.png" height="200px" alt="whales"/>
 </p>
 
 ## Overview
