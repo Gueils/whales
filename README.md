@@ -1,5 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/WhalesIL/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
 [![Test Coverage](https://codeclimate.com/github/WhalesIL/whales/badges/coverage.svg)](https://codeclimate.com/github/WhalesIL/whales/coverage)
+[![Made with Love by Icalia Labs](https://img.shields.io/badge/With%20love%20by-Icalia%20Labs-ff3434.svg)](https://github.com/IcaliaLabs)
 
 <p align="center">
   <img src="whales.png" height="200px" alt="whales"/>
