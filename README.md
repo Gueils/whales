@@ -1,5 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/WhalesIL/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
-[![Build Status](https://travis-ci.org/WhalesIL/whales.svg?branch=master)](https://travis-ci.org/WhalesIL/whales)
+[![Test Coverage](https://codeclimate.com/github/WhalesIL/whales/badges/coverage.svg)](https://codeclimate.com/github/WhalesIL/whales/coverage)
 
 <p align="center">
   <img src="whales.png" height="200px" alt="whales"/>
@@ -81,7 +81,6 @@ Currently we have the following analyzers
 - [Belugas Ruby](https://github.com/WhalesIL/belugas-ruby)
 - [Belugas PHP](https://github.com/WhalesIL/belugas)
 - [Belugas Python](https://github.com/WhalesIL/belugas-python)
-- [Belugas Java](https://github.com/WhalesIL/belugas-java) - _In progress_
 
 ## Contributing
 
