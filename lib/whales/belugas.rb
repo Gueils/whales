@@ -18,7 +18,7 @@ module Whales
                   --env BELUGAS_CODE=#{ENV['BELUGAS_CODE']} \
                   --volume #{ENV['BELUGAS_CODE']}:/code \
                   --volume /var/run/docker.sock:/var/run/docker.sock \
-                  --volume /tmp/fdet:/tmp/fdet whalesil/belugas analyze . -f json"
+                  --volume /tmp/fdet:/tmp/fdet gueils/belugas:latest analyze . -f json"
     end
   end
 end

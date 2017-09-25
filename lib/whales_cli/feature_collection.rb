@@ -19,6 +19,8 @@ module Whales
                                language_features.select { |feature| feature["name"] == "Python" }[0]
                              elsif laravel? || codeignater? || yii? || cakephp? || zend?
                                language_features.select { |feature| feature["name"] == "PHP" }[0]
+                             elsif express?
+                               language_features.select { |feature| feature["name"] == "Node" }[0]
                              else
                                max_ratio_language
                              end
@@ -72,6 +74,10 @@ module Whales
 
     def zend?
       frameworks.map { |f| f["name"] }.include? "zend"
+    end
+
+    def express?
+      frameworks.map { |f| f["name"] }.include? "express"
     end
 
     def frameworks
