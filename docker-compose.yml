@@ -6,7 +6,7 @@ volumes:
 
 services:
   whales:
-    image: icalialabs/whales:development
+    image: gueils/whales:development
     build:
       context: .
       dockerfile: dev.Dockerfile

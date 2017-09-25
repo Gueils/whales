@@ -1,5 +1,5 @@
-[![Code Climate](https://codeclimate.com/github/WhalesIL/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
-[![Test Coverage](https://codeclimate.com/github/WhalesIL/whales/badges/coverage.svg)](https://codeclimate.com/github/WhalesIL/whales/coverage)
+[![Code Climate](https://codeclimate.com/github/gueils/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
+[![Test Coverage](https://codeclimate.com/github/gueils/whales/badges/coverage.svg)](https://codeclimate.com/github/WhalesIL/whales/coverage)
 [![Made with Love by Icalia Labs](https://img.shields.io/badge/With%20love%20by-Icalia%20Labs-ff3434.svg)](https://github.com/IcaliaLabs)
 
 # Whales
@@ -26,11 +26,11 @@ Whales helps you dockerize your applications by outputting the necessary files t
 
 ## Installation
 
-Whales is distributed and run as a Docker [image](https://hub.docker.com/r/whalesil/whales/), so the only thing you need is to have Docker [installed](https://docs.docker.com/engine/installation/) and running on your machine. After that just fire up your terminal and run:
+Whales is distributed and run as a Docker [image](https://hub.docker.com/r/gueils/whales/), so the only thing you need is to have Docker [installed](https://docs.docker.com/engine/installation/) and running on your machine. After that just fire up your terminal and run:
 
 
 ```console
-docker pull whalesil/whales:latest
+docker pull gueils/whales:development
 ```
 
 And that's it! You're ready to use Whales!
@@ -51,7 +51,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code whalesil/whales
+  --volume $(pwd):/code gueils/whales
 ```
 
 By default this command will return `dev.Dockerfile` & `docker-compose.yml` files, these are the files you need to run your application in a dev environment with Docker. These files are not perfect, but we're hoping them to be a great starting point for you.
@@ -64,7 +64,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code whalesil/whales whales tame -e="production"
+  --volume $(pwd):/code gueils/whales whales tame -e="production"
 ```
 
 Until now, this command only returns the `Dockerfile` for production.
@@ -75,11 +75,12 @@ Whales works as a command line interface based on features analyzers, these anal
 
 Currently, we have three feature analyzers: 
 
-- [Belugas Ruby](https://github.com/WhalesIL/belugas-ruby)
-- [Belugas PHP](https://github.com/WhalesIL/belugas)
-- [Belugas Python](https://github.com/WhalesIL/belugas-python)
+- [Belugas Ruby](https://github.com/gueils/belugas-ruby)
+- [Belugas PHP](https://github.com/gueils/belugas)
+- [Belugas Python](https://github.com/gueils/belugas-python)
+- [Belugas Node](https://github.com/gueils/belugas-node)
 
-The above implies we only support 3 languages: Ruby, PHP & Python
+The above implies we only support 3 languages: Ruby, PHP, Node(JS) & Python
 
 ### Architecture
 
@@ -101,7 +102,7 @@ Above command is a bit hard to digest at first glance, so here's a breakdown of 
 - `--interactive --tty --rm`: This tells Docker to run in an interactive mode and to clean up the container when it exits.
 - `--env API_BASE_URI=whales.herokuapp.com` & `env BELUGAS_CODE="${PWD}"`: This sets two environment variables, the first one tell Whales where to find our secret sauce, and the other one points out the code to analyze.
 - `volume /var/run/docker.sock:/var/run/docker.sock`: This allows us to run Docker commands inside of a container (since all Belugas are also docker images).
-- `volume $(pwd):/code whalesil/whales`:  This finally mounts a volume with the code of your application.
+- `volume $(pwd):/code gueils/whales`:  This finally mounts a volume with the code of your application.
 
 ### What's with the cetacean name?
 
@@ -109,13 +110,13 @@ Well, they're really cool [animals](https://en.wikipedia.org/wiki/Beluga_whale)!
 
 ## Contributing
 
-Everyone is freely to collaborate, just make sure you follow our [code of conduct](https://github.com/WhalesIL/whales/blob/master/CODE_OF_CONDUCT.md). Thank you [contributors](https://github.com/WhalesIL/whales/graphs/contributors)!
+Everyone is freely to collaborate, just make sure you follow our [code of conduct](https://github.com/gueils/whales/blob/master/CODE_OF_CONDUCT.md). Thank you [contributors](https://github.com/gueils/whales/graphs/contributors)!
 
 ### Create an Issue
 
-Find a bug and don't know how to fix it? Have trouble following the documentation or have a question about the project? Then. by all means please [create an issue](https://github.com/WhalesIL/whales/issues/new).
+Find a bug and don't know how to fix it? Have trouble following the documentation or have a question about the project? Then. by all means please [create an issue](https://github.com/gueils/whales/issues/new).
 
-Just please make sure you check [existing issues](https://github.com/WhalesIL/whales/issues) to see if what you're running into has been addressed already.
+Just please make sure you check [existing issues](https://github.com/gueils/whales/issues) to see if what you're running into has been addressed already.
 
 ### Submit a Pull Request
 
@@ -129,11 +130,11 @@ Once you've created a pull request, maintainers will chime in to review your pro
 
 ### I want to contribute but don't know where to start
 
-That's great also! We already have some [open issues](https://github.com/WhalesIL/whales/issues) for you to dive in.
+That's great also! We already have some [open issues](https://github.com/gueils/whales/issues) for you to dive in.
 
 ## Copyright
 
-See [LICENSE](https://github.com/WhalesIL/whales/blob/master/LICENSE.txt)
+See [LICENSE](https://github.com/gueils/whales/blob/master/LICENSE.txt)
 
 ![Icalia Labs](https://raw.githubusercontent.com/icalialabs/kaishi/master/logo.png)
 
