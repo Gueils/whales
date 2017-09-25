@@ -4,6 +4,7 @@ require "json"
 require "whales_cli/feature_collection"
 require "api/client"
 require "whales/belugas"
+require "rescuer"
 
 module Whales
   class CLI < Thor
@@ -14,7 +15,14 @@ module Whales
     method_option :path, aliases: "-p", type: :string, required: false
 
     def tame
-      Whales::Belugas.new(options).run
+      rescuer = Rescuer.new
+
+      begin
+        Whales::Belugas.new(options).run
+      rescue Exception => e
+        rescuer.ping e
+        raise e
+      end
     end
   end
 end

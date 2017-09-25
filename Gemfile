@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 gem 'pry'
+gem "slack-notifier"
+
 # Specify your gem's dependencies in whales_cli.gemspec
 gemspec
 
