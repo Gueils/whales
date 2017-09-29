@@ -5,6 +5,8 @@
 </p>
 
 [![Made with Love by Icalia Labs](https://img.shields.io/badge/With%20love%20by-Icalia%20Labs-ff3434.svg)](https://github.com/IcaliaLabs)
+[![](https://images.microbadger.com/badges/version/gueils/whales.svg)](https://microbadger.com/images/gueils/whales "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/gueils/whales.svg)](https://microbadger.com/images/gueils/whales "Get your own image badge on microbadger.com")
 
 Whales helps you dockerize your applications by outputting the necessary files to run your application with Docker. Check it out:
 
