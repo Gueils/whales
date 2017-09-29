@@ -30,7 +30,7 @@ Whales is distributed and run as a Docker [image](https://hub.docker.com/r/gueil
 
 
 ```console
-docker pull gueils/whales:development
+docker pull gueils/whales:latest
 ```
 
 And that's it! You're ready to use Whales!
@@ -51,7 +51,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code gueils/whales:development
+  --volume $(pwd):/code gueils/whales:latest
 ```
 
 By default this command will return `dev.Dockerfile` & `docker-compose.yml` files, these are the files you need to run your application in a dev environment with Docker. These files are not perfect, but we're hoping them to be a great starting point for you.
@@ -64,7 +64,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code gueils/whales:development whales tame -e="production"
+  --volume $(pwd):/code gueils/whales:latest whales tame -e="production"
 ```
 
 Until now, this command only returns the `Dockerfile` for production.
