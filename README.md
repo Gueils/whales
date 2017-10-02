@@ -1,12 +1,12 @@
-[![Code Climate](https://codeclimate.com/github/gueils/whales/badges/gpa.svg)](https://codeclimate.com/github/WhalesIL/whales)
-[![Test Coverage](https://codeclimate.com/github/gueils/whales/badges/coverage.svg)](https://codeclimate.com/github/WhalesIL/whales/coverage)
-[![Made with Love by Icalia Labs](https://img.shields.io/badge/With%20love%20by-Icalia%20Labs-ff3434.svg)](https://github.com/IcaliaLabs)
-
 # Whales
 
 <p align="center">
   <img src="whales.png" height="300px" alt="whales logo"/>
 </p>
+
+[![Made with Love by Icalia Labs](https://img.shields.io/badge/With%20love%20by-Icalia%20Labs-ff3434.svg)](https://github.com/IcaliaLabs)
+[![](https://images.microbadger.com/badges/version/gueils/whales.svg)](https://microbadger.com/images/gueils/whales "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/gueils/whales.svg)](https://microbadger.com/images/gueils/whales "Get your own image badge on microbadger.com")
 
 Whales helps you dockerize your applications by outputting the necessary files to run your application with Docker. Check it out:
 
@@ -30,7 +30,7 @@ Whales is distributed and run as a Docker [image](https://hub.docker.com/r/gueil
 
 
 ```console
-docker pull gueils/whales:development
+docker pull gueils/whales:latest
 ```
 
 And that's it! You're ready to use Whales!
@@ -51,7 +51,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code gueils/whales
+  --volume $(pwd):/code gueils/whales:latest
 ```
 
 By default this command will return `dev.Dockerfile` & `docker-compose.yml` files, these are the files you need to run your application in a dev environment with Docker. These files are not perfect, but we're hoping them to be a great starting point for you.
@@ -64,7 +64,7 @@ docker run \
   --env API_BASE_URI=whales.herokuapp.com \
   --env BELUGAS_CODE="${PWD}" \
   --volume /var/run/docker.sock:/var/run/docker.sock \
-  --volume $(pwd):/code gueils/whales whales tame -e="production"
+  --volume $(pwd):/code gueils/whales:latest whales tame -e="production"
 ```
 
 Until now, this command only returns the `Dockerfile` for production.
