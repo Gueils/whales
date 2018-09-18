@@ -80,7 +80,7 @@ Currently, we have three feature analyzers:
 - [Belugas Python](https://github.com/gueils/belugas-python)
 - [Belugas Node](https://github.com/gueils/belugas-node)
 
-The above implies we only support 3 languages: Ruby, PHP, Node(JS) & Python
+The above implies we only support 4 languages: Ruby, PHP, Node(JS) & Python
 
 ### Architecture
 
