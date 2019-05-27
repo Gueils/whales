@@ -73,7 +73,7 @@ Until now, this command only returns the `Dockerfile` for production.
 
 Whales works as a command line interface based on features analyzers, these analyzers can detect multiple features on your project through a code static analysis, in other words, thanks to these analyzers we can detect what language, framework, database and other dependencies your project uses.
 
-Currently, we have three feature analyzers: 
+Currently, we have four feature analyzers: 
 
 - [Belugas Ruby](https://github.com/gueils/belugas-ruby)
 - [Belugas PHP](https://github.com/gueils/belugas)
